@@ -1,6 +1,8 @@
 # Student Management System
 
-![Status](https://img.shields.io/badge/Status-Active-brightgreen) ![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-blue)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/Pratap525/Student-Records-Management-Web-Application) [![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-blue)](https://github.com/Pratap525/Student-Records-Management-Web-Application)
+
+[View on GitHub](https://github.com/Pratap525/Student-Records-Management-Web-Application)
 A simple yet effective Student Management System built with Java Servlets that allows you to create, read, update, and delete student records.
 
 ## Project Description
@@ -67,12 +69,12 @@ src/
 
 1. Clone this repository
    ```
-   git clone https://github.com/yourusername/student-management-system.git
+   git clone https://github.com/Pratap525/Student-Records-Management-Web-Application.git
    ```
 
 2. Navigate to the project directory
    ```
-   cd student-management-system
+   cd Student-Records-Management-Web-Application
    ```
 
 3. Configure database connection
@@ -103,7 +105,7 @@ src/
 
 2. Access the application in your web browser
    ```
-   http://localhost:8080/student-management-system
+   http://localhost:8080/Student-Records-Management-Web-Application
    ```
 
 3. Use the interface to manage student records
