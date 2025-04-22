@@ -1,5 +1,6 @@
 # Student Management System
 
+![Status](https://img.shields.io/badge/Status-Active-brightgreen) ![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-blue)
 A simple yet effective Student Management System built with Java Servlets that allows you to create, read, update, and delete student records.
 
 ## Project Description
