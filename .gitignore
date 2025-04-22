@@ -1,0 +1,67 @@
+# Eclipse project files
+.classpath
+.project
+.settings/
+.metadata/
+*.launch
+.externalToolBuilders/
+
+# Build directories
+build/
+bin/
+target/
+out/
+dist/
+
+# Compiled files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Log files
+*.log
+log/
+logs/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE-specific files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# Java-specific
+hs_err_pid*
+.hprof
+
+# Servlet-specific
+server/
+

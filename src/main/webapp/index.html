@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .action-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .active {
+            display: block;
+        }
+        .submit-btn {
+            padding: 8px 15px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Management System</h2>
+        
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="action-button" onclick="showForm('createForm')">Add Student</button>
+            <button class="action-button" onclick="showForm('readForm')">Find Student</button>
+            <button class="action-button" onclick="showForm('updateSearchForm')">Update Student</button>
+            <button class="action-button" onclick="showForm('deleteForm')">Delete Student</button>
+            <button class="action-button" onclick="window.location.href='student'">List All Students</button>
+        </div>
+
+        <!-- Create Student Form -->
+        <div id="createForm" class="form-container">
+            <h3>Add New Student</h3>
+            <form action="./student" method="post">
+                <input type="hidden" name="action" value="create">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" name="sname" required>
+                </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="number" name="sage" required>
+                </div>
+                <div class="form-group">
+                    <label>Address:</label>
+                    <input type="text" name="saddress" required>
+                </div>
+                <button type="submit" class="submit-btn">Add Student</button>
+            </form>
+        </div>
+
+        <!-- Read Student Form -->
+        <div id="readForm" class="form-container">
+            <h3>Find Student</h3>
+            <form action="./student" method="get">
+                <input type="hidden" name="action" value="read">
+                <div class="form-group">
+                    <label>Student ID:</label>
+                    <input type="number" name="sid" required>
+                </div>
+                <button type="submit" class="submit-btn">Find Student</button>
+            </form>
+        </div>
+
+        <!-- Update Search Form -->
+        <div id="updateSearchForm" class="form-container">
+            <h3>Find Student to Update</h3>
+            <form action="./student" method="get">
+                <input type="hidden" name="action" value="update">
+                <div class="form-group">
+                    <label>Student ID:</label>
+                    <input type="number" name="sid" required>
+                </div>
+                <button type="submit" class="submit-btn">Find Student</button>
+            </form>
+        </div>
+
+        <!-- Delete Student Form -->
+        <div id="deleteForm" class="form-container">
+            <h3>Delete Student</h3>
+            <form action="./student" method="get">
+                <input type="hidden" name="action" value="delete">
+                <div class="form-group">
+                    <label>Student ID:</label>
+                    <input type="number" name="sid" required>
+                </div>
+                <button type="submit" class="submit-btn">Delete Student</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showForm(formId) {
+            // Hide all forms first
+            const forms = document.getElementsByClassName('form-container');
+            for (let form of forms) {
+                form.classList.remove('active');
+            }
+            
+            // Show the selected form
+            document.getElementById(formId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
